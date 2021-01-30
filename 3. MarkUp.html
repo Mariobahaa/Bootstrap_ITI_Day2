@@ -156,19 +156,21 @@
         
         #content
         {
-            display: table;
+           /* display: table;*/
         }
         
         #mainContent
         {
-            display: table-cell;
+            /*display: table-cell;*/
+            display: block;
             /*width: 620px;
             padding-right: 22px;*/
         }
         
         aside
         {
-            display: table-cell;
+             /*display: table-cell;*/
+            /*display: block;*/
             /*width: 300px;*/
             background: url("images/sidebar_background.png") top left;
         }
@@ -417,8 +419,8 @@
     </section>
     </div>
     
-    <div id="content">
-        <div id="mainContent"><!--role='main'-->
+    <div id="content" class="row">
+        <div id="mainContent" class="col-12 offset-lg-2 col-lg-5 "><!--role='main'-->
             <section>
                 <article class="blogPost">
                     <header>
@@ -525,7 +527,8 @@
                 <input type="submit" value="Post comment" /></p>
             </form>
         </div>
-        <aside>
+        <div class="col-3  d-none d-lg-block">
+        <aside >
             <section>
                 <header>
                     <h3>
@@ -555,6 +558,7 @@
                 </ul>
             </section>
         </aside>
+        </div>
     </div>
     
     
