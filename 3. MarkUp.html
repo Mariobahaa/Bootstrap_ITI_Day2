@@ -11,11 +11,11 @@
     <title>The Flower Blog</title>
     
     <style type="text/css">
-        *
+        /**
         {
             margin: 0;
             padding: 0;
-        }
+        }*/
         
         
         header, footer, section, aside, nav, article
@@ -59,7 +59,7 @@
         {
             position: absolute;
             left: 0;
-           /* width: 100%;*/
+            /*width: 100%;*/
             background: url("images/nav_background.png");
         }
         
@@ -99,9 +99,10 @@
         
         nav ul li.subscribe a
         {
-            /*margin-left: 22px;
-            padding-left: 33px;*/
-            text-align: left;
+            /*margin-left: 22px;*/
+            padding-left: 1.6rem;
+            
+            text-align: left; /*was left*/
             background: url("images/rss.png") left center no-repeat;
         }
         
@@ -382,21 +383,26 @@
 
 </head>
 <body>
-    <header>
-        <h1>
+    <div class="container">
+    
+    <header class="row">
+        <h1 class="col-12 pt-5">
             The Flower Blog
         </h1>
     </header>
-    <nav>
+        
+    <div class="row">
+    <nav class="p-0 m-0">
         <ul>
-            <li class="selected"><a href="#">Blog</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Archives</a></li>
-            <li><a href="#">Contact</a></li>
-            <li class="subscribe"><a href="#">Subscribe via. RSS</a></li>
+            <li  class="selected col-2 offset-lg-1"><a href="#">Blog</a></li>
+            <li  class="col-2"><a href="#" >About</a></li>
+            <li  class="col-2"><a href="#" x>Archives</a></li>
+            <li  class="col-2"><a href="#" >Contact</a></li>
+            <li  class="subscribe col-4 col-lg-2"><a href="#">Subscribe via. RSS</a></li>
         </ul>
     </nav>
-    <section id="intro">
+    </div>
+    <!--<section id="intro">
         <header>
             <h2>
                 Do you love flowers as much as we do?</h2>
@@ -406,7 +412,7 @@
             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
             exercitation ullamco laboris nisi ut.</p>
         <img src="images/intro_flower.png" alt="Flower" />
-    </section>
+    </section>-->
     
     <div id="content">
         <div id="mainContent"><!--role='main'-->
@@ -595,6 +601,7 @@
             </section>
         </div>
     </footer>
+    </div>
     <script src="JS/popper.min.js"></script>
     <script src="bootstrap-5.0.0-beta1-dist/js/bootstrap.js"></script>
 </body>
